@@ -2,6 +2,7 @@
 node_modules/
 dist/
 .astro/
+outputs/
 
 # Local configuration and logs
 .env

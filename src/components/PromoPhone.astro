@@ -1,0 +1,59 @@
+---
+interface Props {
+  src: string;
+  alt: string;
+  label: string;
+  detail: string;
+  secondaryLabel: string;
+  secondaryDetail: string;
+  footnote?: string;
+  secondaryFootnote?: string;
+}
+
+const {
+  src,
+  alt,
+  label,
+  detail,
+  secondaryLabel,
+  secondaryDetail,
+  footnote = "Reviewed before adding",
+  secondaryFootnote = "Real app interface",
+} = Astro.props;
+---
+
+<div class="relative mx-auto w-full max-w-[35rem]">
+  <div class="absolute inset-x-[9%] bottom-[-1.25rem] h-[78%] rounded-[3rem] bg-mist" aria-hidden="true"></div>
+
+  <div class="scan-frame relative mx-auto w-[19rem] max-w-full">
+    <div class="phone-shadow relative overflow-hidden rounded-[2.85rem] border-[8px] border-deep bg-[#f5f5f5]">
+      <img
+        class="block h-auto w-full"
+        src={src}
+        width="720"
+        height="1633"
+        alt={alt}
+        loading="eager"
+        fetchpriority="high"
+      />
+    </div>
+  </div>
+
+  <div class="absolute -left-4 top-[24%] hidden w-44 rounded-3xl border border-deep/10 bg-paper p-4 shadow-lg sm:block">
+    <p class="text-xs font-bold text-teal">{label}</p>
+    <p class="mt-1 text-sm font-semibold text-deep">{detail}</p>
+    <div class="mt-3 flex items-center gap-2 text-[0.68rem] font-semibold text-ink/55">
+      <span class="size-2 rounded-full bg-green"></span>
+      {footnote}
+    </div>
+  </div>
+
+  <div class="absolute -right-3 bottom-[19%] hidden w-44 rounded-3xl border border-deep/10 bg-paper p-4 shadow-lg sm:block">
+    <p class="text-xs font-bold text-coral">{secondaryLabel}</p>
+    <p class="mt-1 text-sm font-semibold text-deep">{secondaryDetail}</p>
+    <div class="mt-3 flex items-center gap-2 text-[0.68rem] font-semibold text-ink/60">
+      <span class="size-2 rounded-full bg-sun"></span>
+      {secondaryFootnote}
+    </div>
+  </div>
+</div>

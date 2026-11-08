@@ -1,0 +1,455 @@
+---
+import SiteLayout from "../layouts/SiteLayout.astro";
+import PromoPhone from "../components/PromoPhone.astro";
+import { site } from "../lib/site";
+---
+
+<SiteLayout>
+  <section class="relative overflow-hidden pb-20 pt-10 sm:pt-12 lg:pb-24 lg:pt-14">
+    <div class="pointer-events-none absolute -right-24 top-20 size-96 rounded-full border-[4rem] border-sun/30" aria-hidden="true"></div>
+    <div class="site-shell relative grid items-center gap-16 lg:grid-cols-[0.92fr_1.08fr] lg:gap-10">
+      <div class="relative z-10">
+        <div class="inline-flex items-center gap-2 rounded-full border border-teal/25 bg-paper px-4 py-2 text-sm font-bold text-teal">
+          <span class="size-2 rounded-full bg-green"></span>
+          A calmer kitchen starts here
+        </div>
+
+        <h1 class="display-title mt-6 max-w-[9.5ch] text-balance text-[3.35rem] font-bold text-deep sm:text-[4.15rem] lg:text-[4.45rem]">
+          Know what’s inside. Cook what’s next.
+        </h1>
+
+        <p class="mt-6 max-w-[34rem] text-pretty text-lg leading-8 text-ink/70 sm:text-xl">
+          See what you have, what to use first, and what you can make — before good food becomes waste.
+        </p>
+
+        <div class="mt-7 flex flex-col gap-3 sm:flex-row">
+          <a class="button-primary px-7 text-base" href="#how-it-works">
+            See how it works
+            <svg width="18" height="18" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+              <path d="M4 10h12M11 5l5 5-5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"></path>
+            </svg>
+          </a>
+          <span class="button-secondary cursor-default bg-transparent text-sm">
+            Built for iPhone and iPad
+          </span>
+        </div>
+
+        <div class="mt-8 flex flex-wrap gap-x-6 gap-y-3 text-sm font-semibold text-ink/65">
+          <span class="flex items-center gap-2">
+            <svg class="text-green" width="17" height="17" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+              <path d="m4 10 4 4 8-9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+            </svg>
+            Start without an account
+          </span>
+          <span class="flex items-center gap-2">
+            <svg class="text-green" width="17" height="17" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+              <path d="m4 10 4 4 8-9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+            </svg>
+            Your inventory stays on your device
+          </span>
+        </div>
+      </div>
+
+      <div class="relative pb-4 lg:pl-10">
+        <PromoPhone
+          src="/images/promo/photo-screen-clean.webp"
+          alt="FridgeVista identifying groceries from a photograph of an open fridge"
+          label="Photo scan ready"
+          detail="11 items identified"
+          secondaryLabel="Review first"
+          secondaryDetail="Add the confirmed items to your fridge"
+          footnote="Reviewed before adding"
+          secondaryFootnote="Real app interface"
+        />
+      </div>
+    </div>
+  </section>
+
+  <section class="border-y border-deep/10 bg-paper">
+    <div class="site-shell grid divide-y divide-deep/10 sm:grid-cols-3 sm:divide-x sm:divide-y-0">
+      <div class="py-7 pr-6">
+        <p class="font-display text-2xl font-bold text-deep">Fridge, freezer, pantry</p>
+        <p class="mt-2 text-sm leading-6 text-ink/60">One clear place for every shelf and drawer.</p>
+      </div>
+      <div class="py-7 sm:px-8">
+        <p class="font-display text-2xl font-bold text-deep">Expiry at a glance</p>
+        <p class="mt-2 text-sm leading-6 text-ink/60">See what needs attention before it turns.</p>
+      </div>
+      <div class="py-7 sm:pl-8">
+        <p class="font-display text-2xl font-bold text-deep">Dinner from what you have</p>
+        <p class="mt-2 text-sm leading-6 text-ink/60">Ask for recipe ideas without another shopping trip.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-24 sm:py-28" id="features">
+    <div class="site-shell">
+      <div class="grid gap-10 lg:grid-cols-[0.78fr_1.22fr] lg:items-end">
+        <div>
+          <p class="section-label">A clear view of every shelf</p>
+          <h2 class="display-title mt-5 text-balance text-4xl font-bold text-deep sm:text-5xl">
+            Your kitchen, without the mystery.
+          </h2>
+        </div>
+        <p class="max-w-2xl text-pretty text-lg leading-8 text-ink/65 lg:justify-self-end">
+          FridgeVista turns scattered groceries into a simple inventory you can search, sort, and actually use. Add items by hand or start with a photo.
+        </p>
+      </div>
+
+      <div class="mt-14 grid gap-5 lg:grid-cols-[1.18fr_0.82fr]">
+        <article class="relative overflow-hidden rounded-[2rem] bg-deep p-7 text-paper sm:p-10">
+          <div class="relative z-10 grid items-center gap-10 md:grid-cols-[0.9fr_1.1fr]">
+            <div>
+              <p class="text-sm font-bold text-mist/75">Every storage spot, accounted for</p>
+              <h3 class="display-title mt-3 text-4xl font-bold sm:text-5xl">Find it before you buy it again.</h3>
+              <p class="mt-5 max-w-sm text-pretty leading-7 text-mist/75">
+                Search across your fridge, freezer, and pantry. Organize by freshness, category, or storage location.
+              </p>
+              <div class="mt-7 flex flex-wrap gap-2 text-xs font-bold">
+                <span class="rounded-full bg-mist px-3 py-2 text-deep">Fridge</span>
+                <span class="rounded-full bg-white/10 px-3 py-2">Freezer</span>
+                <span class="rounded-full bg-white/10 px-3 py-2">Pantry</span>
+              </div>
+            </div>
+
+            <div class="rounded-[1.75rem] border border-paper/20 bg-paper p-2 shadow-xl">
+              <img
+                class="block w-full rounded-[1.25rem]"
+                src="/images/promo/inventory-list.webp"
+                width="720"
+                height="993"
+                alt="FridgeVista inventory showing chicken, tortillas, and peas grouped by storage location"
+                loading="eager"
+              />
+            </div>
+          </div>
+
+          <div class="pointer-events-none absolute -bottom-20 -right-20 size-72 rounded-full border-[2.5rem] border-teal/35" aria-hidden="true"></div>
+        </article>
+
+        <article class="rounded-[2rem] bg-mist p-7 sm:p-9">
+          <div class="grid size-14 place-items-center rounded-2xl bg-paper text-deep">
+            <svg width="28" height="28" viewBox="0 0 32 32" fill="none" aria-hidden="true">
+              <path d="M8 6h11l5 5v15H8V6Z" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"></path>
+              <path d="M19 6v5h5M12 18h8M12 22h5" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"></path>
+            </svg>
+          </div>
+          <h3 class="display-title mt-7 text-3xl font-bold text-deep">Photo in. Inventory out.</h3>
+          <p class="mt-4 text-pretty leading-7 text-ink/65">
+            Photograph a shelf, drawer, or receipt. FridgeVista helps pull out the items so you can skip the typing and get back to your day.
+          </p>
+          <div class="relative mt-8 overflow-hidden rounded-3xl border border-deep/10 bg-paper p-2">
+            <img
+              class="aspect-[4/3] w-full rounded-[1.25rem] object-cover"
+              src="/images/promo/fridge-photo-crop.webp"
+              width="640"
+              height="520"
+              alt="Photograph of fresh produce inside an open fridge"
+              loading="eager"
+            />
+            <div class="absolute bottom-5 left-5 rounded-2xl bg-paper px-4 py-3 shadow-lg">
+              <p class="text-xs font-bold text-teal">Photo recognition</p>
+              <p class="mt-1 text-sm font-bold text-deep">11 items found</p>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-sage py-24 sm:py-28">
+    <div class="site-shell grid items-center gap-14 lg:grid-cols-2">
+      <div class="order-2 lg:order-1">
+        <div class="relative mx-auto max-w-[31rem] rounded-[2.5rem] bg-paper p-3 shadow-xl shadow-deep/10 sm:p-4">
+          <img
+            class="block w-full rounded-[1.9rem]"
+            src="/images/promo/expiry-cards.webp"
+            width="720"
+            height="760"
+            alt="FridgeVista home screen showing fridge item count, an expiring item alert, and shopping-list count"
+            loading="eager"
+          />
+          <div class="mx-2 mb-2 mt-4 flex items-center justify-between gap-4 rounded-2xl bg-deep px-4 py-3 text-paper sm:mx-3">
+            <div>
+              <p class="text-sm font-bold">Expiration overview</p>
+              <p class="mt-1 text-xs text-mist/70">The food that needs attention stays in view.</p>
+            </div>
+            <span class="grid size-9 flex-none place-items-center rounded-full bg-sun/20 text-[#8d4b2d]">
+              <svg width="17" height="17" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+                <path d="M10 3v8l4 2" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"></path>
+                <circle cx="10" cy="10" r="7" stroke="currentColor" stroke-width="1.5"></circle>
+              </svg>
+            </span>
+          </div>
+        </div>
+      </div>
+
+      <div class="order-1 lg:order-2 lg:pl-8">
+        <p class="section-label">A gentler expiration system</p>
+        <h2 class="display-title mt-5 max-w-[10ch] text-balance text-4xl font-bold text-deep sm:text-5xl">
+          Catch it before it turns.
+        </h2>
+        <p class="mt-6 max-w-xl text-pretty text-lg leading-8 text-ink/65">
+          Dates and freshness cues make the next good choice obvious. FridgeVista puts the food that needs attention first — no daily spreadsheet review required.
+        </p>
+        <div class="mt-8 grid gap-5 sm:grid-cols-2">
+          <div>
+            <p class="font-display text-xl font-bold text-deep">See what’s urgent</p>
+            <p class="mt-2 text-sm leading-6 text-ink/60">A clear priority list across every storage area.</p>
+          </div>
+          <div>
+            <p class="font-display text-xl font-bold text-deep">Remind on your device</p>
+            <p class="mt-2 text-sm leading-6 text-ink/60">Local expiration reminders help without adding another feed to check.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="overflow-hidden bg-deep py-24 text-paper sm:py-32">
+    <div class="site-shell grid items-center gap-16 lg:grid-cols-[0.9fr_1.1fr]">
+      <div>
+        <p class="section-label text-mist">From inventory to dinner</p>
+        <h2 class="display-title mt-5 max-w-[10ch] text-balance text-4xl font-bold sm:text-6xl">
+          “What can I make with this?”
+        </h2>
+        <p class="mt-6 max-w-xl text-pretty text-lg leading-8 text-mist/72">
+          Ask FridgeVista about the food you already have. Get recipe ideas, use up what is expiring, and make a shopping list for whatever is missing.
+        </p>
+        <p class="mt-6 flex items-start gap-3 text-sm leading-6 text-mist/60">
+          <svg class="mt-0.5 flex-none" width="18" height="18" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+            <circle cx="10" cy="10" r="7.5" stroke="currentColor" stroke-width="1.5"></circle>
+            <path d="M10 9v5M10 6.2v.1" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"></path>
+          </svg>
+          AI suggestions can be wrong. Always check ingredients, allergens, and food safety yourself.
+        </p>
+      </div>
+
+      <div class="relative">
+        <div class="scan-frame rounded-[2rem] bg-teal p-4 sm:p-6">
+          <img
+            class="mx-auto block w-full max-w-[25rem] rounded-[1.5rem]"
+            src="/images/promo/recipe-screen-clean.webp"
+            width="720"
+            height="1633"
+            alt="FridgeVista recipe assistant showing a chicken and pea curry idea made from ingredients already in the kitchen"
+            loading="eager"
+          />
+        </div>
+        <div class="absolute -bottom-5 left-3 rounded-2xl bg-paper px-4 py-3 text-deep shadow-xl sm:left-7">
+          <p class="text-xs font-bold text-teal">Complete recipe card</p>
+          <p class="mt-1 text-sm font-bold">Ingredients you have and what’s missing</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="border-y border-deep/10 bg-paper py-24 sm:py-28">
+    <div class="site-shell grid items-center gap-14 lg:grid-cols-[1.05fr_0.95fr]">
+      <div>
+        <p class="section-label">A list that stays connected</p>
+        <h2 class="display-title mt-5 max-w-[10ch] text-balance text-4xl font-bold text-deep sm:text-5xl">
+          Turn recipe gaps into one clean list.
+        </h2>
+        <p class="mt-6 max-w-xl text-pretty text-lg leading-8 text-ink/65">
+          Add what you are missing, check it off at the store, and bring the new groceries back into your kitchen view.
+        </p>
+        <div class="mt-8 flex flex-wrap gap-2 text-xs font-bold text-deep">
+          <span class="rounded-full bg-mist px-3 py-2">Grouped by aisle</span>
+          <span class="rounded-full bg-sun/20 px-3 py-2">Quantities included</span>
+          <span class="rounded-full bg-mist px-3 py-2">Shopping mode</span>
+        </div>
+      </div>
+
+      <div class="mx-auto w-full max-w-[26rem] rounded-[2.2rem] bg-sage p-3 sm:p-5">
+        <img
+          class="block w-full rounded-[1.6rem] border border-deep/10"
+          src="/images/promo/shopping-screen-web.webp"
+          width="720"
+          height="1633"
+          alt="FridgeVista shopping list with dairy, condiments, bakery, and uncategorized sections"
+          loading="eager"
+        />
+      </div>
+    </div>
+  </section>
+
+  <section class="py-24 sm:py-28" id="how-it-works">
+    <div class="site-shell">
+      <div class="max-w-3xl">
+        <p class="section-label">A short, sensible routine</p>
+        <h2 class="display-title mt-5 text-balance text-4xl font-bold text-deep sm:text-5xl">
+          Three small steps. A much calmer kitchen.
+        </h2>
+      </div>
+
+      <ol class="mt-14 grid gap-7 md:grid-cols-3">
+        <li class="border-t-2 border-teal pt-6">
+          <span class="font-display text-lg font-bold text-teal tabular-nums">01</span>
+          <h3 class="mt-4 font-display text-2xl font-bold text-deep">Put your kitchen in view</h3>
+          <p class="mt-3 text-pretty leading-7 text-ink/62">
+            Add what you bring home by hand or with a photo. Sort it into the fridge, freezer, or pantry.
+          </p>
+        </li>
+        <li class="border-t-2 border-sun pt-6">
+          <span class="font-display text-lg font-bold text-[#8d4b2d] tabular-nums">02</span>
+          <h3 class="mt-4 font-display text-2xl font-bold text-deep">Let freshness rise to the top</h3>
+          <p class="mt-3 text-pretty leading-7 text-ink/62">
+            See what needs using soon and get a local reminder when it matters.
+          </p>
+        </li>
+        <li class="border-t-2 border-coral pt-6">
+          <span class="font-display text-lg font-bold text-coral tabular-nums">03</span>
+          <h3 class="mt-4 font-display text-2xl font-bold text-deep">Make the next meal easier</h3>
+          <p class="mt-3 text-pretty leading-7 text-ink/62">
+            Ask for ideas, move missing items to your shopping list, and use the food you already bought.
+          </p>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="border-y border-deep/10 bg-paper py-24 sm:py-28" id="privacy">
+    <div class="site-shell grid gap-14 lg:grid-cols-[0.85fr_1.15fr]">
+      <div>
+        <p class="section-label">Privacy without a catch</p>
+        <h2 class="display-title mt-5 max-w-[11ch] text-balance text-4xl font-bold text-deep sm:text-5xl">
+          Your kitchen stays your business.
+        </h2>
+        <p class="mt-6 max-w-lg text-pretty text-lg leading-8 text-ink/65">
+          Core inventory, lists, and reminders work locally without an account. Sign in only when you want hosted AI, recipe search, or a subscription.
+        </p>
+      </div>
+
+      <div class="rounded-[2rem] bg-cream p-5 sm:p-7">
+        <div class="grid items-center gap-7 sm:grid-cols-[0.7fr_1.3fr]">
+          <img
+            class="mx-auto block w-full max-w-[16rem] rounded-[1.4rem] border border-deep/10"
+            src="/images/promo/guest-poster-web.webp"
+            width="720"
+            height="1342"
+            alt="FridgeVista account screen with a Continue as guest option"
+            loading="eager"
+          />
+
+          <div>
+            <div class="flex items-center justify-between gap-4 border-b border-deep/10 pb-5">
+              <div>
+                <p class="font-display text-xl font-bold text-deep">Guest mode</p>
+                <p class="mt-1 text-sm text-ink/55">No account. No server copy of your pantry.</p>
+              </div>
+              <span class="rounded-full bg-green px-3 py-1 text-xs font-bold text-white">On device</span>
+            </div>
+            <div class="mt-6 grid gap-5">
+              <div class="flex gap-3">
+                <span class="mt-0.5 grid size-6 flex-none place-items-center rounded-full bg-green/15 text-green">
+                  <svg width="14" height="14" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="m4 10 4 4 8-9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+                </span>
+                <div>
+                  <p class="text-sm font-bold text-deep">Inventory and shopping lists</p>
+                  <p class="mt-1 text-xs leading-5 text-ink/55">Available immediately, even without signing in.</p>
+                </div>
+              </div>
+              <div class="flex gap-3">
+                <span class="mt-0.5 grid size-6 flex-none place-items-center rounded-full bg-green/15 text-green">
+                  <svg width="14" height="14" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="m4 10 4 4 8-9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+                </span>
+                <div>
+                  <p class="text-sm font-bold text-deep">Local expiration reminders</p>
+                  <p class="mt-1 text-xs leading-5 text-ink/55">Scheduled on your device by the app.</p>
+                </div>
+              </div>
+              <div class="flex gap-3">
+                <span class="mt-0.5 grid size-6 flex-none place-items-center rounded-full bg-sun/20 text-[#8d4b2d]">
+                  <svg width="13" height="13" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M10 5v10M5 10h10" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path></svg>
+                </span>
+                <div>
+                  <p class="text-sm font-bold text-deep">AI and recipe search</p>
+                  <p class="mt-1 text-xs leading-5 text-ink/55">Available after signing in and accepting the AI disclosure.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-24 sm:py-28" id="faq">
+    <div class="site-shell grid gap-12 lg:grid-cols-[0.7fr_1.3fr]">
+      <div>
+        <p class="section-label">Questions, answered</p>
+        <h2 class="display-title mt-5 text-balance text-4xl font-bold text-deep sm:text-5xl">
+          Before you open the fridge.
+        </h2>
+      </div>
+      <div>
+        <details class="faq-item" open>
+          <summary>Do I need an account to use FridgeVista?</summary>
+          <p class="max-w-2xl pb-5 text-pretty leading-7 text-ink/65">
+            No. Core inventory, shopping lists, expiration tracking, and local reminders work without an account. Hosted AI, recipe search, photo analysis, and subscriptions require sign-in.
+          </p>
+        </details>
+        <details class="faq-item">
+          <summary>Does my pantry sync between devices?</summary>
+          <p class="max-w-2xl pb-5 text-pretty leading-7 text-ink/65">
+            Not currently. Inventory is stored locally on the device. Keeping guest data on-device is part of the privacy-first design.
+          </p>
+        </details>
+        <details class="faq-item">
+          <summary>Can FridgeVista add groceries from a photo?</summary>
+          <p class="max-w-2xl pb-5 text-pretty leading-7 text-ink/65">
+            Yes. Signed-in users can photograph a shelf, drawer, or receipt and use the AI assistant to help identify items and reduce manual entry.
+          </p>
+        </details>
+        <details class="faq-item">
+          <summary>Can it tell me what to cook tonight?</summary>
+          <p class="max-w-2xl pb-5 text-pretty leading-7 text-ink/65">
+            It can suggest recipes from ingredients you have. Results may come from third-party recipe pages or AI processing, so verify ingredients, allergens, and food safety yourself.
+          </p>
+        </details>
+        <details class="faq-item">
+          <summary>What happens to my data if I use guest mode?</summary>
+          <p class="max-w-2xl pb-5 text-pretty leading-7 text-ink/65">
+            Guest inventory stays in local app storage. Clearing app data or uninstalling the app can permanently remove it, and FridgeVista cannot restore it from a server.
+          </p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <section class="pb-20 sm:pb-28" id="download">
+    <div class="site-shell">
+      <div class="relative overflow-hidden rounded-[2.5rem] bg-teal px-7 py-14 text-paper sm:px-12 sm:py-16">
+        <div class="pointer-events-none absolute -right-16 -top-20 size-80 rounded-full border-[3rem] border-paper/15" aria-hidden="true"></div>
+        <div class="relative z-10 flex flex-col items-stretch justify-between gap-9 lg:flex-row lg:items-center">
+          <div class="flex flex-col items-start gap-5 sm:flex-row sm:items-center">
+            <img
+              class="size-20 flex-none rounded-[1.4rem] shadow-xl sm:size-24"
+              src={site.iconUrl}
+              width="96"
+              height="96"
+              alt="FridgeVista app icon"
+            />
+            <div>
+              <p class="font-display text-3xl font-bold text-balance sm:text-5xl">Make room for better meals.</p>
+              <p class="mt-3 max-w-xl text-pretty leading-7 text-paper/75">
+                A clearer kitchen, less waste, and dinner ideas from what you already have.
+              </p>
+            </div>
+          </div>
+          <a class="inline-flex min-h-13 w-full flex-none items-center justify-center gap-3 rounded-full bg-paper px-6 py-3 font-bold text-deep hover:bg-cream sm:w-auto" href="#download">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="M16.7 12.7c0-2.2 1.8-3.2 1.9-3.3a4.1 4.1 0 0 0-3.2-1.7c-1.3-.1-2.6.8-3.2.8-.7 0-1.7-.8-2.8-.8-1.4 0-2.8.9-3.5 2.2-1.5 2.6-.4 6.4 1.1 8.5.7 1 1.5 2.1 2.6 2 1.1 0 1.5-.7 2.8-.7 1.3 0 1.7.7 2.8.7 1.1 0 1.9-1 2.6-2 .8-1.2 1.1-2.3 1.1-2.4 0 0-2.2-.9-2.2-3.3Z" fill="currentColor"></path>
+              <path d="M14.4 6.3c.6-.7 1-1.6.9-2.6-.9 0-2 .6-2.6 1.3-.6.6-1 1.6-.9 2.5 1 .1 2-.5 2.6-1.2Z" fill="currentColor"></path>
+            </svg>
+            <span>
+              <span class="block text-[0.65rem] font-semibold text-ink/55">Coming soon on the</span>
+              <span class="block text-lg">App Store</span>
+            </span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+</SiteLayout>

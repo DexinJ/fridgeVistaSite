@@ -1,0 +1,198 @@
+---
+import SiteLayout from "../../layouts/SiteLayout.astro";
+import PromoPhone from "../../components/PromoPhone.astro";
+import { routes, site } from "../../lib/site";
+
+const path = routes("zh");
+---
+
+<SiteLayout
+  locale="zh"
+  title="FridgeVista｜把厨房看清楚，把下一餐安排好"
+  description="管理冰箱、冷冻室和食品柜中的食材，及时处理临期食品，利用现有食材规划下一餐。"
+>
+  <section class="relative overflow-hidden pb-20 pt-10 sm:pt-12 lg:pb-24 lg:pt-14">
+    <div class="pointer-events-none absolute -right-24 top-20 size-96 rounded-full border-[4rem] border-sun/30" aria-hidden="true"></div>
+    <div class="site-shell relative grid items-center gap-16 lg:grid-cols-[0.92fr_1.08fr] lg:gap-10">
+      <div class="relative z-10">
+        <div class="inline-flex items-center gap-2 rounded-full border border-teal/25 bg-paper px-4 py-2 text-sm font-bold text-teal">
+          <span class="size-2 rounded-full bg-green"></span>
+          看清家中食材，减少浪费，让每一餐更简单
+        </div>
+        <h1 class="display-title mt-6 max-w-[11ch] text-balance text-[2.65rem] font-bold text-deep sm:text-[3.6rem] lg:text-[4rem]">
+          <span class="block">厨房里有什么，</span>
+          <span class="block">下一餐，</span>
+          <span class="block">就做什么。</span>
+        </h1>
+        <p class="mt-6 max-w-[34rem] text-pretty text-lg leading-8 text-ink/70 sm:text-xl">
+          食材库存、保质期提醒、AI 菜谱推荐和购物清单，一处管理。看清家中食材，及时用掉临期食品。缺少的材料加入购物清单，让每天的买菜和做饭都更轻松。
+        </p>
+        <div class="mt-7 flex flex-col gap-3 sm:flex-row">
+          <a class="button-primary px-7 text-base" href="#features">看看怎么用</a>
+          <span class="button-secondary cursor-default bg-transparent text-sm">为 iPhone 和 iPad 设计</span>
+        </div>
+        <div class="mt-8 flex flex-wrap gap-x-6 gap-y-3 text-sm font-semibold text-ink/65">
+          <span>✓ 免费使用基础功能，无需注册</span>
+          <span>✓ 冷藏、冷冻和食品柜统一管理</span>
+          <span>✓ 登录后可用 AI 菜谱推荐与照片识别</span>
+        </div>
+      </div>
+      <div class="relative pb-4 lg:pl-10">
+        <PromoPhone
+          src="/images/promo/photo-screen-clean.webp"
+          alt="FridgeVista 从冰箱照片识别食材"
+          label="照片识别好了"
+          detail="找到 11 样食材"
+          secondaryLabel="先核对，再加入"
+          secondaryDetail="确认后放进冰箱"
+          footnote="确认后再添加"
+          secondaryFootnote="真实应用界面"
+        />
+      </div>
+    </div>
+  </section>
+
+  <section class="border-y border-deep/10 bg-paper">
+    <div class="site-shell grid divide-y divide-deep/10 sm:grid-cols-3 sm:divide-x sm:divide-y-0">
+      <div class="py-7 pr-6">
+        <p class="font-display text-2xl font-bold text-deep">冰箱、冷冻室、食品柜，一目了然</p>
+        <p class="mt-2 text-sm leading-6 text-ink/60">冷藏、冷冻、储物柜统一管理，买菜前先看看家里还有什么。</p>
+      </div>
+      <div class="py-7 sm:px-8">
+        <p class="font-display text-2xl font-bold text-deep">该先吃什么，一眼就知道</p>
+        <p class="mt-2 text-sm leading-6 text-ink/60">临期食材及时提醒，不再轻易忘在冰箱角落。</p>
+      </div>
+      <div class="py-7 sm:pl-8">
+        <p class="font-display text-2xl font-bold text-deep">家里有什么，就能做什么</p>
+        <p class="mt-2 text-sm leading-6 text-ink/60">用好现有食材，缺少的材料再加入购物清单。</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-24 sm:py-28" id="features">
+    <div class="site-shell">
+      <div class="grid gap-10 lg:grid-cols-[0.78fr_1.22fr] lg:items-end">
+        <div>
+          <p class="section-label">买菜前，先看一眼家里</p>
+          <h2 class="display-title mt-5 text-balance text-4xl font-bold text-deep sm:text-5xl">少买重复的，少丢还能吃的。</h2>
+        </div>
+        <p class="max-w-2xl text-pretty text-lg leading-8 text-ink/65 lg:justify-self-end">
+          记录家中食材，及时提醒临期食品。现有食材可以用来规划下一餐，缺少的材料则自动整理进购物清单。让买菜和做饭都更有条理。
+        </p>
+      </div>
+
+      <div class="mt-14 grid gap-5 lg:grid-cols-[1.18fr_0.82fr]">
+        <article class="relative overflow-hidden rounded-[2rem] bg-deep p-7 text-paper sm:p-10">
+          <div class="grid items-center gap-10 md:grid-cols-[0.9fr_1.1fr]">
+            <div>
+              <p class="text-sm font-bold text-mist/75">每个位置，都记得清楚</p>
+              <h3 class="display-title mt-3 text-4xl font-bold sm:text-5xl">冰箱有什么，搜一下就清楚。</h3>
+              <p class="mt-5 max-w-sm text-pretty leading-7 text-mist/75">
+                冷藏、冷冻、储物柜一起找。也可以按新鲜度、类别或位置整理。
+              </p>
+            </div>
+            <div class="rounded-[1.75rem] border border-paper/20 bg-paper p-2 shadow-xl">
+              <img class="block w-full rounded-[1.25rem]" src="/images/promo/inventory-list.webp" width="720" height="993" alt="FridgeVista 按存放位置分类的库存列表" loading="eager" />
+            </div>
+          </div>
+        </article>
+
+        <article class="rounded-[2rem] bg-mist p-7 sm:p-9">
+          <p class="text-sm font-bold text-teal">拍照录入</p>
+          <h3 class="display-title mt-4 text-3xl font-bold text-deep">拍张照，先把食材认出来。</h3>
+          <p class="mt-4 text-pretty leading-7 text-ink/65">拍摄冰箱、储物柜或购物收据，FridgeVista 会识别其中的食材。确认识别结果后，即可将食材添加到库存。</p>
+          <div class="mt-8 overflow-hidden rounded-3xl border border-deep/10 bg-paper p-2">
+            <img class="aspect-[4/3] w-full rounded-[1.25rem] object-cover" src="/images/promo/fridge-photo-crop.webp" width="640" height="520" alt="冰箱中的新鲜蔬菜和水果" loading="eager" />
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-sage py-24 sm:py-28">
+    <div class="site-shell grid items-center gap-14 lg:grid-cols-2">
+      <div class="order-2 lg:order-1">
+        <img class="mx-auto w-full max-w-[31rem] rounded-[2rem] border border-deep/10 shadow-xl shadow-deep/10" src="/images/promo/expiry-cards.webp" width="720" height="760" alt="FridgeVista 首页显示冰箱数量、临期提醒和购物清单数量" loading="eager" />
+      </div>
+      <div class="order-1 lg:order-2 lg:pl-8">
+        <p class="section-label">不靠记性，也不等坏掉</p>
+        <h2 class="display-title mt-5 max-w-[10ch] text-balance text-4xl font-bold text-deep sm:text-5xl">临期食材及时发现，减少不必要的浪费。</h2>
+        <p class="mt-6 max-w-xl text-pretty text-lg leading-8 text-ink/65">根据保质期和新鲜度整理食材，优先显示需要尽快食用的食品。还可以开启本机提醒，避免忘记处理冰箱里的食材。</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="overflow-hidden bg-deep py-24 text-paper sm:py-32">
+    <div class="site-shell grid items-center gap-16 lg:grid-cols-[0.9fr_1.1fr]">
+      <div>
+        <p class="section-label text-mist">从冰箱到餐桌</p>
+        <h2 class="display-title mt-5 max-w-[10ch] text-balance text-4xl font-bold sm:text-6xl">“家里这些，今晚能做点什么？”</h2>
+        <p class="mt-6 max-w-xl text-pretty text-lg leading-8 text-mist/72">让 FridgeVista 根据现有食材推荐菜谱，优先利用临期食材，并将缺少的材料一键加入购物清单。</p>
+        <p class="mt-6 text-sm leading-6 text-mist/60">AI 建议可能不准确。食材、过敏原和食品安全，请自己再核对一遍。</p>
+      </div>
+      <div class="scan-frame rounded-[2rem] bg-teal p-4 sm:p-6">
+        <img class="mx-auto block w-full max-w-[25rem] rounded-[1.5rem]" src="/images/promo/recipe-screen-clean.webp" width="720" height="1633" alt="FridgeVista 根据已有食材生成的菜谱结果" loading="eager" />
+      </div>
+    </div>
+  </section>
+
+  <section class="border-y border-deep/10 bg-paper py-24 sm:py-28">
+    <div class="site-shell grid items-center gap-14 lg:grid-cols-[1.05fr_0.95fr]">
+      <div>
+        <p class="section-label">缺什么，记进清单就好</p>
+        <h2 class="display-title mt-5 text-balance text-4xl font-bold text-deep sm:text-5xl">缺什么，就补到同一张清单里。</h2>
+        <p class="mt-6 max-w-xl text-pretty text-lg leading-8 text-ink/65">让 AI 助手根据现有食材推荐菜谱。缺少的材料自动加入分类购物清单，购物时逐项勾选，买回家后再添加到库存。</p>
+      </div>
+      <img class="mx-auto w-full max-w-[26rem] rounded-[2rem] border border-deep/10 bg-sage p-3" src="/images/promo/shopping-screen-web.webp" width="720" height="1633" alt="FridgeVista 分类购物清单" loading="eager" />
+    </div>
+  </section>
+
+  <section class="py-24 sm:py-28">
+    <div class="site-shell grid gap-14 lg:grid-cols-[0.85fr_1.15fr]">
+      <div>
+        <p class="section-label">不用注册，也能先用起来</p>
+        <h2 class="display-title mt-5 max-w-[11ch] text-balance text-4xl font-bold text-deep sm:text-5xl">厨房里的事，先留在你自己的设备里。</h2>
+        <p class="mt-6 max-w-lg text-pretty text-lg leading-8 text-ink/65">记录库存、整理清单、看保质期和设置本机提醒，都不需要账号。需要使用云端 AI、菜谱搜索或订阅功能时，再登录即可。</p>
+      </div>
+      <div class="rounded-[2rem] bg-paper p-5 shadow-lg shadow-deep/8 sm:p-7">
+        <img class="mx-auto w-full max-w-[16rem] rounded-[1.4rem] border border-deep/10" src="/images/promo/guest-poster-web.webp" width="720" height="1342" alt="FridgeVista 的游客模式选项" loading="eager" />
+        <div class="mt-6 grid gap-4 sm:grid-cols-2">
+          <p class="text-sm leading-6 text-ink/65"><strong class="text-deep">不用注册</strong><br />打开就能记录库存、清单和保质期。</p>
+          <p class="text-sm leading-6 text-ink/65"><strong class="text-deep">数据保存在本机</strong><br />当前版本不会把库存同步到其他设备。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="border-y border-deep/10 bg-paper py-24 sm:py-28">
+    <div class="site-shell grid gap-12 lg:grid-cols-[0.7fr_1.3fr]">
+      <div>
+        <p class="section-label">常见问题</p>
+        <h2 class="display-title mt-5 text-balance text-4xl font-bold text-deep sm:text-5xl">开始前，先看这几件事。</h2>
+      </div>
+      <div>
+        <details class="faq-item" open><summary>不注册账号，能用到什么程度？</summary><p class="max-w-2xl pb-5 leading-7 text-ink/65">记录库存、整理购物清单、查看保质期和设置本机提醒都没问题。云端 AI、菜谱搜索、照片识别和订阅需要登录。</p></details>
+        <details class="faq-item"><summary>换手机后，库存会自己跟过去吗？</summary><p class="max-w-2xl pb-5 leading-7 text-ink/65">暂时不会。当前版本的厨房数据保存在原来那台设备上。</p></details>
+        <details class="faq-item"><summary>游客模式下的数据会怎样处理？</summary><p class="max-w-2xl pb-5 leading-7 text-ink/65">游客模式下的库存数据保存在本机应用中。清除应用数据或卸载应用，可能导致这些数据永久丢失。由于数据不会上传到服务器，FridgeVista 无法为你恢复。</p></details>
+        <details class="faq-item"><summary>碰到问题，去哪里问？</summary><p class="max-w-2xl pb-5 leading-7 text-ink/65"><a class="font-bold text-teal underline" href={path.support}>前往帮助中心</a>。可以先找答案，也可以直接发一个私密支持请求。</p></details>
+      </div>
+    </div>
+  </section>
+
+  <section class="pb-20 pt-24 sm:pb-28">
+    <div class="site-shell">
+      <div class="rounded-[2.5rem] bg-teal px-7 py-14 text-paper sm:px-12">
+        <div class="flex flex-col items-start justify-between gap-10 lg:flex-row lg:items-center">
+          <div class="flex flex-col items-start gap-5 sm:flex-row sm:items-center">
+            <img class="size-20 flex-none rounded-[1.4rem] shadow-xl sm:size-24" src={site.iconUrl} width="96" height="96" alt="FridgeVista 应用图标" />
+            <div>
+              <p class="font-display text-3xl font-bold text-balance sm:text-5xl">下一餐，从看清厨房开始。</p>
+              <p class="mt-3 max-w-xl text-pretty leading-7 text-paper/75">看清家中食材，优先用掉临期食品，减少食物浪费，也让每天的晚餐选择更轻松。</p>
+            </div>
+          </div>
+          <span class="inline-flex min-h-13 items-center rounded-full bg-paper px-6 py-3 font-bold text-deep">即将上架 App Store</span>
+        </div>
+      </div>
+    </div>
+  </section>
+</SiteLayout>

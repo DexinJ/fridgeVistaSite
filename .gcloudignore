@@ -1,0 +1,20 @@
+# Local tooling and source files are not needed in the App Engine package.
+.git/
+.github/
+.gcloudignore
+.gitignore
+.vscode/
+.idea/
+.astro/
+node_modules/
+src/
+public/
+docs/
+scripts/
+outputs/
+tmp/
+visuals/
+*.md
+*.log
+.env*
+$null

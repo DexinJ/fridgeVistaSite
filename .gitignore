@@ -1,0 +1,20 @@
+# Dependencies and generated output
+node_modules/
+dist/
+.astro/
+
+# Local configuration and logs
+.env
+.env.*
+!.env.example
+*.log
+
+# Operating system and editor files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Temporary local files
+tmp/
+$null

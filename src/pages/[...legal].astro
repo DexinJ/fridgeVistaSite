@@ -1,0 +1,60 @@
+---
+import LegalLayout from "../layouts/LegalLayout.astro";
+import type { Locale } from "../lib/site";
+
+export function getStaticPaths() {
+  const pages = [
+    ["privacy", "Privacy Policy", "How FridgeVista handles account, app, AI, and support information."],
+    ["terms", "Terms of Use", "The terms that govern use of the FridgeVista application and services."],
+    ["subprocessors", "Sub-processors", "The service providers that process information for FridgeVista."],
+    ["licenses", "Licences and Acknowledgements", "Open-source software and licence notices used by FridgeVista."],
+    ["delete-account", "Account Deletion", "How to delete a FridgeVista account or reset data stored on a device."],
+  ];
+  const chinesePages = [
+    ["privacy", "隐私政策", "FridgeVista 如何处理账号、应用、AI 及支持信息。"],
+    ["terms", "使用条款", "适用于 FridgeVista 应用与服务的使用条款。"],
+    ["subprocessors", "第三方处理者", "为 FridgeVista 处理信息的服务提供商。"],
+    ["licenses", "开源许可与致谢", "FridgeVista 使用的开源软件及许可信息。"],
+    ["delete-account", "删除账号", "如何删除 FridgeVista 账号或清除设备上的数据。"],
+  ];
+
+  return [
+    ...pages.map(([slug, title, description]) => ({
+      params: { legal: slug === "delete-account" ? "support/delete-account" : slug },
+      props: { slug, title, description, locale: "en" as Locale, updated: "October 21, 2026" },
+    })),
+    ...chinesePages.map(([slug, title, description]) => ({
+      params: { legal: slug === "delete-account" ? "zh/support/delete-account" : `zh/${slug}` },
+      props: { slug, title, description, locale: "zh" as Locale, updated: "2026 年 10 月 21 日" },
+    })),
+  ];
+}
+
+const { slug, title, description, locale, updated } = Astro.props as {
+  slug: string;
+  title: string;
+  description: string;
+  locale: Locale;
+  updated: string;
+};
+
+const legalFiles = import.meta.glob("../legal-content/*/*.html", {
+  eager: true,
+  query: "?raw",
+  import: "default",
+}) as Record<string, string>;
+
+const copyHtml = legalFiles[`../legal-content/${locale}/${slug}.html`];
+
+if (!copyHtml) {
+  throw new Error(`Missing legal content for ${locale}/${slug}`);
+}
+---
+
+<LegalLayout
+  locale={locale}
+  title={title}
+  description={description}
+  updated={updated}
+  copyHtml={copyHtml}
+/>

@@ -1,0 +1,41 @@
+---
+import SiteLayout from "./SiteLayout.astro";
+import type { Locale } from "../lib/site";
+import { routes } from "../lib/site";
+
+interface Props {
+  locale: Locale;
+  title: string;
+  description: string;
+  updated: string;
+  copyHtml: string;
+}
+
+const { locale, title, description, updated, copyHtml } = Astro.props;
+const path = routes(locale);
+const backLabel = locale === "zh" ? "返回帮助中心" : "Back to help center";
+const legalLabel = locale === "zh" ? "法律信息" : "Legal";
+const updatedLabel = locale === "zh" ? "最后更新" : "Last updated";
+---
+
+<SiteLayout locale={locale} title={`${title} — FridgeVista`} description={description}>
+  <section class="border-b border-deep/10 bg-cream pb-14 pt-12 sm:pb-16 sm:pt-16">
+    <div class="site-shell">
+      <a class="inline-flex items-center gap-2 text-sm font-bold text-teal hover:text-deep" href={path.support}>
+        <svg width="15" height="15" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+          <path d="M16 10H4m5-5-5 5 5 5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"></path>
+        </svg>
+        {backLabel}
+      </a>
+      <p class="section-label mt-8">{legalLabel}</p>
+      <h1 class="display-title mt-5 max-w-[13ch] text-balance text-5xl font-bold text-deep sm:text-6xl">{title}</h1>
+      <p class="mt-5 text-sm font-semibold text-ink/55">{updatedLabel}: {updated}</p>
+    </div>
+  </section>
+
+  <section class="bg-paper py-12 sm:py-16">
+    <div class="site-shell">
+      <article class="legal-copy mx-auto max-w-[58rem]" set:html={copyHtml} />
+    </div>
+  </section>
+</SiteLayout>

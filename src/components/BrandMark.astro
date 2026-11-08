@@ -1,0 +1,28 @@
+---
+import { site } from "../lib/site";
+
+interface Props {
+  inverted?: boolean;
+  href?: string;
+}
+
+const { inverted = false, href = "/" } = Astro.props;
+---
+
+<a class="inline-flex items-center gap-3 no-underline" href={href} aria-label="FridgeVista home">
+  <img
+    class="size-10 rounded-[0.8rem]"
+    src={site.iconUrl}
+    width="40"
+    height="40"
+    alt=""
+  />
+  <span
+    class:list={[
+      "font-display text-[1.25rem] font-bold",
+      inverted ? "text-paper" : "text-deep",
+    ]}
+  >
+    FridgeVista
+  </span>
+</a>

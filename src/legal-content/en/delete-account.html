@@ -1,0 +1,105 @@
+<div class="intro">
+          <p>You can permanently delete your FridgeVista account from inside the app. This page explains the steps, what is removed, what is kept, and what to do if you cannot sign in.</p>
+        </div>
+
+        <nav aria-label="Account deletion contents">
+          <strong>On this page</strong>
+          <ul>
+            <li><a href="#guest-data">Delete guest data</a></li>
+            <li><a href="#in-app">Delete from the app</a></li>
+            <li><a href="#cannot-sign-in">If you cannot sign in</a></li>
+            <li><a href="#removed">What is deleted</a></li>
+            <li><a href="#retained">What is retained, and why</a></li>
+            <li><a href="#timing">How long it takes</a></li>
+            <li><a href="#subscription">Your App Store subscription</a></li>
+            <li><a href="#apple">Sign in with Apple</a></li>
+            <li><a href="#rights">Other data requests</a></li>
+          </ul>
+        </nav>
+
+        <section id="guest-data">
+          <h2>Delete Guest Data</h2>
+          <p>FridgeVista's account-free guest mode does not create a FridgeVista account or server-side account records. There is no account to delete for guest use.</p>
+          <p>To erase guest data, open FridgeVista and select <strong>Settings &gt; Privacy &amp; Data &gt; Reset Data on This Device</strong>. This clears the fridge inventory, shopping list, preferences, reminders, and other guest data stored on that device.</p>
+          <p>Creating or signing in to an account does not automatically transfer guest data in the current version. Deleting a signed-in account does not automatically erase a separate guest-data namespace already stored on the same device.</p>
+        </section>
+
+        <section id="in-app">
+          <h2>Delete From the App</h2>
+          <ol>
+            <li>Open FridgeVista and sign in to the account you want to delete.</li>
+            <li>Go to <strong>Settings</strong>.</li>
+            <li>Open the <strong>Account</strong> section.</li>
+            <li>Tap <strong>Delete account</strong>.</li>
+            <li>Read the confirmation and confirm. You may be asked to sign in again if your session is older than a few minutes; this is a security requirement, not a new account.</li>
+          </ol>
+          <p>Deletion starts immediately and cannot be undone. If you only want to free space or start fresh while keeping your account, use Settings &gt; Privacy &amp; Data to clear chat messages or reset device data instead.</p>
+        </section>
+
+        <section id="cannot-sign-in">
+          <h2>If You Cannot Sign In</h2>
+          <p>Deletion is done in the app, not by email. If you cannot sign in, submit the <a href="https://forms.gle/bLcumMVMQak9A3H99" rel="noopener noreferrer">FridgeVista support request</a> and choose account deletion, or write to <a href="mailto:support.pantrio@gmail.com?subject=FridgeVista%20account%20deletion">support.pantrio@gmail.com</a> with the subject <strong>FridgeVista account deletion</strong>, and include:</p>
+          <ul>
+            <li>the email address on the FridgeVista account;</li>
+            <li>the sign-in method you used (email and password, Sign in with Apple, or Google);</li>
+            <li>the approximate date you created the account or last used it; and</li>
+            <li>anything else that helps us identify the account, such as your username in the app.</li>
+          </ul>
+          <p>We may ask you to verify that you control the account before we delete it. Please do not send a password, an Apple Account password, or an API key — we will never ask for them. If you deleted the app but not the account, reinstall FridgeVista and sign in to delete the account from Settings, which is faster than the form.</p>
+          <p>If the app is unusable for you, tell us what happens when you try. A broken deletion flow is something we will fix.</p>
+        </section>
+
+        <section id="removed">
+          <h2>What Is Deleted</h2>
+          <ul>
+            <li><strong>Your FridgeVista account:</strong> your Firebase Authentication account, email address or provider identifier, FridgeVista username, and account record.</li>
+            <li><strong>Subscription records tied to you:</strong> the verified App Store subscription and transaction rows linked to your account, and the subscription status the app reported for diagnostics.</li>
+            <li><strong>Usage records:</strong> your daily AI token counters and daily web-search counters.</li>
+            <li><strong>Sign in with Apple credential:</strong> the encrypted refresh token FridgeVista stored in order to disconnect your Apple sign-in.</li>
+            <li><strong>Data on this device:</strong> fridge, freezer, and pantry items, shopping list, saved recipes and preferences, notes, chat history and summaries, attached chat photos, scheduled reminders, and saved custom AI provider settings, including any API key held in the device keychain.</li>
+          </ul>
+          <p>FridgeVista does not keep copies of your conversations or prompts on its servers, so there is no server-side chat history to delete.</p>
+        </section>
+
+        <section id="retained">
+          <h2>What Is Retained, and Why</h2>
+          <p>Two limited records survive deletion. Both are described in the <a href="/privacy/">Privacy Policy</a>.</p>
+          <ul>
+            <li><strong>A deletion record.</strong> The account identifier, the deletion and completion status, timestamps, and the result of the Apple disconnection request. It exists so that a deletion cannot be undone by a stale signed-in session, and so that an interrupted deletion can be finished after a server restart.</li>
+            <li><strong>A pseudonymous subscription ownership record.</strong> The App Store environment, the original App Store transaction identifier, and the anonymous account token that first claimed that transaction. It contains no name, email address, or FridgeVista account identifier. It exists so that a subscription you are still paying for can be re-linked to a new FridgeVista account instead of being stranded. Apple also knows these transaction identifiers and can associate them with your Apple Account.</li>
+          </ul>
+          <p>Backups and archived copies may retain deleted data until they are overwritten through the normal backup cycle. Information that must be kept for legal, tax, security, fraud-prevention, or dispute-resolution reasons is retained only as long as required. Aggregated or de-identified information that cannot reasonably be linked to you may be kept for reliability and service improvement.</p>
+          <p>Deleting your FridgeVista account does not delete your Google account or your Apple Account, and does not remove data those providers keep under their own policies.</p>
+        </section>
+
+        <section id="timing">
+          <h2>How Long It Takes</h2>
+          <ul>
+            <li><strong>Immediately:</strong> you are signed out and the app clears the deleted account's data from this device.</li>
+            <li><strong>Usually within minutes:</strong> the server removes your account rows, subscription rows, usage counters, and the encrypted Apple credential.</li>
+            <li><strong>If a third party is unavailable:</strong> the disconnection request to Apple may be retried in the background. The app tells you if the request is pending, and you can disconnect FridgeVista yourself in iOS Settings at any time.</li>
+            <li><strong>Backups:</strong> copies may persist until the next normal backup cycle.</li>
+          </ul>
+        </section>
+
+        <section id="subscription">
+          <h2>Your App Store Subscription</h2>
+          <p>Deleting your FridgeVista account does <strong>not</strong> cancel an App Store subscription, and it does not delete your Apple Account. If you are subscribed, cancel separately so you are not charged again:</p>
+          <ul>
+            <li>iOS Settings &gt; your name &gt; Subscriptions &gt; FridgeVista, then Cancel Subscription; or</li>
+            <li>inside FridgeVista, Settings &gt; Plan &amp; Usage &gt; Manage Apple Subscription.</li>
+          </ul>
+          <p>Refunds are handled by Apple at <a href="https://reportaproblem.apple.com/" rel="noopener noreferrer">reportaproblem.apple.com</a>.</p>
+        </section>
+
+        <section id="apple">
+          <h2>Sign in with Apple</h2>
+          <p>When your FridgeVista account is deleted, FridgeVista asks Apple to disconnect the app from your Apple Account. If that request cannot be completed automatically, the app shows you these steps, and you can always do them yourself:</p>
+          <p>iOS Settings &gt; your name &gt; Sign-In &amp; Security &gt; Sign in with Apple &gt; FridgeVista &gt; Stop Using Sign in with Apple.</p>
+          <p>This disconnects the sign-in relationship. It does not cancel an App Store subscription.</p>
+        </section>
+
+        <section id="rights">
+          <h2>Other Data Requests</h2>
+          <p>Depending on where you live, you may have the right to request access to, correction of, deletion of, restriction of, or a copy of personal information associated with you. Write to <a href="mailto:support.pantrio@gmail.com">support.pantrio@gmail.com</a> and we will explain what we can provide and how we verify that you control the account. Because most FridgeVista content lives on your device, the fastest way to review your own data is to open the app; exporting or clearing it from the app's Privacy &amp; Data settings is immediate.</p>
+        </section>

@@ -1,0 +1,107 @@
+<div class="intro">
+          <p>你可以永久删除 FridgeVista 账号。本页说明操作步骤、会删除和保留的数据，以及无法登录时的处理方式。</p>
+          <div class="notice"><strong>译本说明：</strong>本简体中文译本仅为方便阅读。如与英文版本存在差异，以英文版本为准。</div>
+        </div>
+
+        <nav aria-label="账号删除目录">
+          <strong>本页内容</strong>
+          <ul>
+            <li><a href="#guest-data">删除游客数据</a></li>
+            <li><a href="#in-app">在应用中删除</a></li>
+            <li><a href="#cannot-sign-in">无法登录时</a></li>
+            <li><a href="#removed">删除的数据</a></li>
+            <li><a href="#retained">保留的数据与原因</a></li>
+            <li><a href="#timing">处理时间</a></li>
+            <li><a href="#subscription">App Store 订阅</a></li>
+            <li><a href="#apple">通过 Apple 登录</a></li>
+            <li><a href="#rights">其他数据请求</a></li>
+          </ul>
+        </nav>
+
+        <section id="guest-data">
+          <h2>删除游客数据</h2>
+          <p>FridgeVista 的免账号游客模式不会创建 FridgeVista 账号或服务器账号记录，因此游客没有账号可删除。</p>
+          <p>要清除游客数据，请打开 FridgeVista 并选择 <strong>设置 &gt; 隐私与数据 &gt; 重置本机数据</strong>。这会清除该设备上的冰箱库存、购物清单、偏好、提醒及其他游客数据。</p>
+          <p>当前版本中，创建账号或登录不会自动转移游客数据。删除登录账号不会自动删除此前在同一设备上单独保存的游客数据。</p>
+        </section>
+
+        <section id="in-app">
+          <h2>在应用中删除账号</h2>
+          <ol>
+            <li>打开 FridgeVista 并登录要删除的账号。</li>
+            <li>打开<strong>设置</strong>。</li>
+            <li>进入<strong>账号</strong>。</li>
+            <li>点击<strong>删除账号</strong>。</li>
+            <li>阅读并确认提示。若会话过旧，应用可能要求重新登录；这是安全要求，不会创建新账号。</li>
+          </ol>
+          <p>删除会立即开始且无法撤销。如只想腾出空间或重新开始但保留账号，可在“设置 &gt; 隐私与数据”中清除聊天或重置设备数据。</p>
+        </section>
+
+        <section id="cannot-sign-in">
+          <h2>无法登录时</h2>
+          <p>账号删除在应用内完成，不通过电子邮件直接删除。无法登录时，请提交<a href="https://forms.gle/8kr1TrdPfExXGjr78" rel="noopener noreferrer">中文客服请求</a>并选择删除账号，或发送邮件至 <a href="mailto:support.pantrio@gmail.com?subject=FridgeVista%20account%20deletion">support.pantrio@gmail.com</a>，主题填写<strong>删除账号</strong>，并提供：</p>
+          <ul>
+            <li>FridgeVista 账号邮箱；</li>
+            <li>使用的登录方式（邮箱密码、通过 Apple 登录或 Google）；</li>
+            <li>创建账号或最后使用的大致日期；以及</li>
+            <li>有助于识别账号的其他信息，例如 FridgeVista 用户名。</li>
+          </ul>
+          <p>我们可能先验证账号控制权。请勿发送 FridgeVista 密码、Apple 账号密码或 API 密钥。如只是卸载了应用，重新安装并登录后从设置中删除通常更快。</p>
+          <p>如应用无法使用，请说明尝试时发生的情况。删除流程故障是我们会修复的问题。</p>
+        </section>
+
+        <section id="removed">
+          <h2>删除的数据</h2>
+          <ul>
+            <li><strong>FridgeVista 账号：</strong>Firebase Authentication 账号、电子邮箱或服务商标识、FridgeVista 用户名和账号记录。</li>
+            <li><strong>账号关联的订阅记录：</strong>已验证的 App Store 订阅和交易记录，以及应用报告的诊断状态。</li>
+            <li><strong>用量记录：</strong>AI 令牌、菜谱推荐和网络搜索计数。</li>
+            <li><strong>Apple 登录凭据：</strong>用于解除 Apple 登录关联的加密刷新令牌。</li>
+            <li><strong>本机账号数据：</strong>冰箱、冷冻室和储藏室食材、购物清单、保存的菜谱和偏好、笔记、聊天记录与摘要、附加照片、提醒及自定义 AI 设置和钥匙串中的 API 密钥。</li>
+          </ul>
+          <p>FridgeVista 服务器不保存聊天或提示副本，因此没有服务器聊天记录可删除。账号删除仅清除该账号的本机数据，不会自动清除同一设备上单独保存的游客数据。</p>
+        </section>
+
+        <section id="retained">
+          <h2>保留的数据与原因</h2>
+          <p>删除后保留两项有限记录：</p>
+          <ul>
+            <li><strong>删除记录：</strong>账号标识、删除和完成状态、时间及 Apple 解绑结果，用于防止旧会话恢复已删除账号并完成中断的删除。</li>
+            <li><strong>匿名订阅归属记录：</strong>App Store 环境、原始交易标识和首次认领该交易的匿名账号令牌，不包含姓名、电子邮箱或 FridgeVista 账号标识，用于把仍在付费的订阅关联到新账号。</li>
+          </ul>
+          <p>备份和归档副本可能保留至正常备份周期覆盖。为法律、税务、安全、欺诈防范或争议处理所需的信息仅在必要期间保留。无法合理关联至个人的聚合或去标识信息可能继续保留。</p>
+          <p>删除 FridgeVista 账号不会删除 Google 或 Apple 账号，也不会删除这些服务商按其政策保留的数据。</p>
+        </section>
+
+        <section id="timing">
+          <h2>处理时间</h2>
+          <ul>
+            <li>立即：退出登录，并清除该账号在本机上的数据。</li>
+            <li>通常几分钟内：移除服务器账号记录、订阅记录、用量计数和 Apple 加密凭据。</li>
+            <li>第三方不可用时：Apple 解绑可能在后台重试；应用会显示待处理状态，也可在 iOS 设置中手动停止使用 Apple 登录。</li>
+            <li>备份：副本可能保留至下一正常备份周期。</li>
+          </ul>
+        </section>
+
+        <section id="subscription">
+          <h2>App Store 订阅</h2>
+          <p>删除 FridgeVista 账号不会取消 App Store 订阅，也不会删除 Apple 账号。如仍订阅，请单独取消：</p>
+          <ul>
+            <li>iOS 设置 &gt; 你的姓名 &gt; 订阅 &gt; FridgeVista &gt; 取消订阅；或</li>
+            <li>FridgeVista 中的设置 &gt; 套餐与用量 &gt; 管理 Apple 订阅。</li>
+          </ul>
+          <p>退款由 Apple 通过 reportaproblem.apple.com 处理。</p>
+        </section>
+
+        <section id="apple">
+          <h2>通过 Apple 登录</h2>
+          <p>删除 FridgeVista 账号时，FridgeVista 会请求 Apple 解除应用关联。如无法自动完成，应用会显示手动步骤：</p>
+          <p>iOS 设置 &gt; 你的姓名 &gt; 登录与安全 &gt; 通过 Apple 登录 &gt; FridgeVista &gt; 停止使用通过 Apple 登录。</p>
+          <p>这只会解除登录关联，不会取消 App Store 订阅。</p>
+        </section>
+
+        <section id="rights">
+          <h2>其他数据请求</h2>
+          <p>根据所在地法律，你可能有权访问、更正、删除、限制或取得与个人相关的信息副本。请发送邮件至 <a href="mailto:support.pantrio@gmail.com">support.pantrio@gmail.com</a>，我们会说明可提供的内容及验证账号控制权的方式。</p>
+          <p>FridgeVista 的多数内容保存在本机。查看、清除或重置设备数据最快的方式是直接使用应用的“隐私与数据”设置。</p>
+        </section>

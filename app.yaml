@@ -1,0 +1,21 @@
+runtime: nodejs22
+
+handlers:
+  - url: /
+    static_files: dist/index.html
+    upload: dist/index.html
+
+  - url: /(.+\.[A-Za-z0-9]+)$
+    static_files: dist/\1
+    upload: dist/\1
+
+  - url: /(.+)/$
+    static_files: dist/\1/index.html
+    upload: dist/\1/index.html
+
+  - url: /(.+)$
+    static_files: dist/\1/index.html
+    upload: dist/\1/index.html
+
+error_handlers:
+  - file: dist/404.html

@@ -4,7 +4,7 @@ const englishForm = "https://forms.gle/bLcumMVMQak9A3H99";
 const chineseForm = "https://forms.gle/8kr1TrdPfExXGjr78";
 
 export const site = {
-  email: "support.pantrio@gmail.com",
+  email: "support.fridgevista@gmail.com",
   appStoreUrl: "",
   iconUrl: "/fridgevista-icon.png?v=e83b2142",
   forms: {

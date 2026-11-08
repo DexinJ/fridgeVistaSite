@@ -51,6 +51,7 @@ for (const [locale, config] of Object.entries(locales)) {
 
     let content = main
       .replaceAll("Pantrio", "FridgeVista")
+      .replaceAll("support.pantrio@gmail.com", "support.fridgevista@gmail.com")
       .replaceAll("Support Forum", "Help Center")
       .replaceAll("support forum", "help center")
       .replaceAll("支持论坛", "帮助中心")
